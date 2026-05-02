@@ -34,17 +34,17 @@ export default function Home() {
 
               <div className="mt-8 flex flex-wrap gap-4">
                 <Link
-                  href="/services"
+                  href="/performances"
                   className="rounded-full bg-red-600 px-6 py-3 font-semibold text-white transition hover:bg-red-500"
                 >
-                  View Services
+                  View Performances
                 </Link>
 
                 <Link
-                  href="/gallery"
+                  href="/shop"
                   className="rounded-full border border-white/20 px-6 py-3 font-semibold text-white transition hover:bg-white hover:text-black"
                 >
-                  View Gallery
+                  Visit Shop
                 </Link>
 
                 <Link
@@ -93,7 +93,7 @@ export default function Home() {
                 </div>
 
                 <div className="rounded-2xl border border-white/10 bg-black/40 p-4">
-                  <p className="text-sm text-gray-400">Popular services</p>
+                  <p className="text-sm text-gray-400">Popular Performances</p>
                   <p className="mt-2 text-lg font-semibold">
                     Lion Dance · Qilin Dance · Dragon Dance
                   </p>
@@ -113,8 +113,8 @@ export default function Home() {
                 </p>
                 <p className="mt-2 text-sm leading-7 text-gray-300">
                   This project combines business website design, e-commerce
-                  ideas, enquiry basket logic, checkout flow and real enquiry email
-                  handling.
+                  ideas, enquiry basket logic, checkout flow and real enquiry
+                  email handling.
                 </p>
               </div>
             </div>
@@ -160,8 +160,8 @@ export default function Home() {
 
             <div className="rounded-3xl border border-white/10 bg-white/5 p-6 transition hover:border-blue-400/40 hover:bg-white/10">
               <p className="text-sm font-semibold uppercase tracking-[0.2em] text-blue-400">
-  Dragon Dance
-</p>
+                Dragon Dance
+              </p>
               <h3 className="mt-4 text-2xl font-bold">Big visual impact</h3>
               <p className="mt-4 leading-7 text-gray-300">
                 Best for large events, festivals and public performances where
@@ -195,15 +195,15 @@ export default function Home() {
               Explore More
             </p>
             <h2 className="mt-3 text-4xl font-bold">
-              Browse services, products and event visuals
+              Browse performances, products and event visuals
             </h2>
 
             <div className="mt-8 grid gap-4 sm:grid-cols-2">
               <Link
-                href="/services"
+                href="/performances"
                 className="rounded-2xl border border-white/10 bg-black/30 p-5 transition hover:border-white/30 hover:bg-white/10"
               >
-                <p className="text-xl font-semibold">Services</p>
+                <p className="text-xl font-semibold">Performances</p>
                 <p className="mt-2 text-sm text-gray-400">
                   Performance packages and event use cases
                 </p>
@@ -220,10 +220,10 @@ export default function Home() {
               </Link>
 
               <Link
-                href="/gallery"
+                href="/performances"
                 className="rounded-2xl border border-white/10 bg-black/30 p-5 transition hover:border-white/30 hover:bg-white/10"
               >
-                <p className="text-xl font-semibold">Gallery</p>
+                <p className="text-xl font-semibold">Performance Visuals</p>
                 <p className="mt-2 text-sm text-gray-400">
                   Real images and visual event inspiration
                 </p>
@@ -244,102 +244,108 @@ export default function Home() {
       </section>
 
       <section className="border-b border-white/10 bg-black">
-  <div className="mx-auto max-w-6xl px-6 py-20">
-    <p className="mb-3 text-sm uppercase tracking-[0.3em] text-red-400">
-      Gallery Preview
-    </p>
-
-    <h2 className="text-4xl font-bold md:text-5xl">
-      See the energy in action
-    </h2>
-
-    <p className="mt-4 max-w-2xl text-gray-300">
-      Explore real visuals from lion dance, qilin dance and dragon dance
-      performances. Visit the full gallery for more event inspiration.
-    </p>
-
-    <div className="mt-10 grid gap-6 md:grid-cols-3">
-      <Link
-        href="/gallery"
-        className="group overflow-hidden rounded-2xl border border-white/10 bg-white/5"
-      >
-        <div className="relative h-72 w-full overflow-hidden">
-          <Image
-            src="/images/gallery/lion-dance.png"
-            alt="Lion dance performance"
-            fill
-            className="object-cover transition duration-300 group-hover:scale-105"
-          />
-        </div>
-
-        <div className="p-5">
-          <h3 className="text-2xl font-semibold text-red-400">Lion Dance</h3>
-          <p className="mt-2 text-sm text-gray-300">
-            Powerful movement and strong visual energy for celebrations and
-            grand openings.
+        <div className="mx-auto max-w-6xl px-6 py-20">
+          <p className="mb-3 text-sm uppercase tracking-[0.3em] text-red-400">
+            Performance Preview
           </p>
-        </div>
-      </Link>
 
-      <Link
-        href="/gallery"
-        className="group overflow-hidden rounded-2xl border border-white/10 bg-white/5"
-      >
-        <div className="relative h-72 w-full overflow-hidden">
-          <Image
-            src="/images/gallery/qilin-dance.png"
-            alt="Qilin dance performance"
-            fill
-            className="object-cover transition duration-300 group-hover:scale-105"
-          />
-        </div>
+          <h2 className="text-4xl font-bold md:text-5xl">
+            See the energy in action
+          </h2>
 
-        <div className="p-5">
-          <h3 className="text-2xl font-semibold text-yellow-400">
-            Qilin Dance
-          </h3>
-          <p className="mt-2 text-sm text-gray-300">
-            Symbolic performance style with a unique cultural feel and strong
-            visual identity.
+          <p className="mt-4 max-w-2xl text-gray-300">
+            Explore real visuals from lion dance, qilin dance and dragon dance
+            performances. Visit the full performances page for more event
+            inspiration.
           </p>
-        </div>
-      </Link>
 
-      <Link
-        href="/gallery"
-        className="group overflow-hidden rounded-2xl border border-white/10 bg-white/5"
-      >
-        <div className="relative h-72 w-full overflow-hidden">
-          <Image
-            src="/images/gallery/dragon-dance.png"
-            alt="Dragon dance performance"
-            fill
-            className="object-cover transition duration-300 group-hover:scale-105"
-          />
-        </div>
+          <div className="mt-10 grid gap-6 md:grid-cols-3">
+            <Link
+              href="/performances"
+              className="group overflow-hidden rounded-2xl border border-white/10 bg-white/5"
+            >
+              <div className="relative h-72 w-full overflow-hidden">
+                <Image
+                  src="/images/performances/lion-dance.png"
+                  alt="Lion dance performance"
+                  fill
+                  sizes="(max-width: 768px) 100vw, 33vw"
+                  className="object-cover transition duration-300 group-hover:scale-105"
+                />
+              </div>
 
-        <div className="p-5">
-          <h3 className="text-2xl font-semibold text-blue-400">
-  Dragon Dance
-</h3>
-          <p className="mt-2 text-sm text-gray-300">
-            Large-scale performance visuals that add excitement to festivals and
-            public events.
-          </p>
-        </div>
-      </Link>
-    </div>
+              <div className="p-5">
+                <h3 className="text-2xl font-semibold text-red-400">
+                  Lion Dance
+                </h3>
+                <p className="mt-2 text-sm text-gray-300">
+                  Powerful movement and strong visual energy for celebrations
+                  and grand openings.
+                </p>
+              </div>
+            </Link>
 
-    <div className="mt-8">
-      <Link
-        href="/gallery"
-        className="inline-flex rounded-full border border-white/20 px-6 py-3 font-semibold text-white transition hover:bg-white hover:text-black"
-      >
-        View Full Gallery
-      </Link>
-    </div>
-  </div>
-</section>
+            <Link
+              href="/performances"
+              className="group overflow-hidden rounded-2xl border border-white/10 bg-white/5"
+            >
+              <div className="relative h-72 w-full overflow-hidden">
+                <Image
+                  src="/images/performances/qilin-dance.png"
+                  alt="Qilin dance performance"
+                  fill
+                  sizes="(max-width: 768px) 100vw, 33vw"
+                  className="object-cover transition duration-300 group-hover:scale-105"
+                />
+              </div>
+
+              <div className="p-5">
+                <h3 className="text-2xl font-semibold text-yellow-400">
+                  Qilin Dance
+                </h3>
+                <p className="mt-2 text-sm text-gray-300">
+                  Symbolic performance style with a unique cultural feel and
+                  strong visual identity.
+                </p>
+              </div>
+            </Link>
+
+            <Link
+              href="/performances"
+              className="group overflow-hidden rounded-2xl border border-white/10 bg-white/5"
+            >
+              <div className="relative h-72 w-full overflow-hidden">
+                <Image
+                  src="/images/performances/dragon-dance.png"
+                  alt="Dragon dance performance"
+                  fill
+                  sizes="(max-width: 768px) 100vw, 33vw"
+                  className="object-cover transition duration-300 group-hover:scale-105"
+                />
+              </div>
+
+              <div className="p-5">
+                <h3 className="text-2xl font-semibold text-blue-400">
+                  Dragon Dance
+                </h3>
+                <p className="mt-2 text-sm text-gray-300">
+                  Large-scale performance visuals that add excitement to
+                  festivals and public events.
+                </p>
+              </div>
+            </Link>
+          </div>
+
+          <div className="mt-8">
+            <Link
+              href="/performances"
+              className="inline-flex rounded-full border border-white/20 px-6 py-3 font-semibold text-white transition hover:bg-white hover:text-black"
+            >
+              View All Performances
+            </Link>
+          </div>
+        </div>
+      </section>
 
       <section className="bg-black">
         <div className="mx-auto max-w-6xl px-6 py-16">
@@ -377,6 +383,6 @@ export default function Home() {
           </div>
         </div>
       </section>
-</main>
+    </main>
   );
 }

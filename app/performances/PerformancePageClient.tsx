@@ -3,35 +3,35 @@
 import Image from "next/image";
 import { useEffect, useState } from "react";
 
-const galleryImages = [
+const performanceImages = [
   {
     title: "Lion Dance",
     description:
-      "Powerful movement and strong visual energy for celebrations and grand openings.",
-    src: "/images/gallery/lion-dance.png",
+      "Powerful lion dance performances for celebrations, openings, weddings and community events.",
+    src: "/images/performances/lion-dance.png",
     titleColor: "text-red-400",
   },
   {
     title: "Qilin Dance",
     description:
-      "Symbolic performance style with a unique cultural feel and strong visual identity.",
-    src: "/images/gallery/qilin-dance.png",
+      "Elegant qilin dance performances that symbolise luck, prosperity and cultural tradition.",
+    src: "/images/performances/qilin-dance.png",
     titleColor: "text-yellow-400",
   },
   {
     title: "Dragon Dance",
     description:
-      "Large-scale performance visuals that add excitement to festivals and public events.",
-    src: "/images/gallery/dragon-dance.png",
+      "High-energy dragon dance performances for festivals, public shows and large events.",
+    src: "/images/performances/dragon-dance.png",
     titleColor: "text-blue-400",
   },
 ];
 
-export default function GalleryPageClient() {
+export default function PerformancePageClient() {
   const [selectedIndex, setSelectedIndex] = useState<number | null>(null);
 
   const selectedImage =
-    selectedIndex !== null ? galleryImages[selectedIndex] : null;
+    selectedIndex !== null ? performanceImages[selectedIndex] : null;
 
   function openLightbox(index: number) {
     setSelectedIndex(index);
@@ -45,7 +45,9 @@ export default function GalleryPageClient() {
     if (selectedIndex === null) return;
 
     const previousIndex =
-      selectedIndex === 0 ? galleryImages.length - 1 : selectedIndex - 1;
+      selectedIndex === 0
+        ? performanceImages.length - 1
+        : selectedIndex - 1;
 
     setSelectedIndex(previousIndex);
   }
@@ -54,7 +56,9 @@ export default function GalleryPageClient() {
     if (selectedIndex === null) return;
 
     const nextIndex =
-      selectedIndex === galleryImages.length - 1 ? 0 : selectedIndex + 1;
+      selectedIndex === performanceImages.length - 1
+        ? 0
+        : selectedIndex + 1;
 
     setSelectedIndex(nextIndex);
   }
@@ -90,15 +94,16 @@ export default function GalleryPageClient() {
           Lucky Arts Team
         </p>
 
-        <h1 className="text-5xl font-bold">Gallery</h1>
+        <h1 className="text-5xl font-bold">Performances</h1>
 
-        <p className="mt-4 max-w-2xl text-gray-300">
-          Explore images of lion dance, qilin dance and dragon dance
-          performances. Click any image to view it larger.
+        <p className="mt-4 max-w-3xl text-gray-300">
+          Lucky Arts Team provides traditional Chinese performances for
+          weddings, grand openings, business events, festivals, parties and
+          cultural celebrations.
         </p>
 
         <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-          {galleryImages.map((image, index) => (
+          {performanceImages.map((image, index) => (
             <button
               key={image.title}
               type="button"
@@ -110,6 +115,7 @@ export default function GalleryPageClient() {
                   src={image.src}
                   alt={image.title}
                   fill
+                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                   className="object-cover transition duration-300 hover:scale-105"
                 />
               </div>
@@ -167,6 +173,7 @@ export default function GalleryPageClient() {
                     src={selectedImage.src}
                     alt={selectedImage.title}
                     fill
+                    sizes="100vw"
                     className="object-contain transition duration-300 group-hover:scale-[1.02]"
                   />
                 </div>
@@ -197,7 +204,7 @@ export default function GalleryPageClient() {
               </p>
 
               <div className="flex gap-2 overflow-x-auto pb-2 sm:gap-3">
-                {galleryImages.map((image, index) => (
+                {performanceImages.map((image, index) => (
                   <button
                     key={image.title}
                     type="button"
@@ -213,6 +220,7 @@ export default function GalleryPageClient() {
                       src={image.src}
                       alt={image.title}
                       fill
+                      sizes="96px"
                       className="object-cover"
                     />
                   </button>
